@@ -18,10 +18,10 @@ description: 希望自己有个好的开始。
 nshu.com/p/05289a4bc8b2，里面写的非常明确，按照整个步骤，边琢磨边研究，以前对于github如何使
 用也所知甚少，完全靠自己的猜测，花了3个小时建成，喜于言表。
   下面是我对整个博客的理解：
-  1、创建githbub账号；<br/>
-  2、绑定本机与github的关系，即SSH_KEY,生成好放到github存储，即双方握手；<br/>
-  3、购买域名，推荐godaddy；<br/><br/>
-  4、去github上folk一个博客项目，然后开通github pages；<br/>
-  5、绑定github与域名的dns关系，推荐 DNSpod；<br/>
-  6、测试上线，修改个人信息、发博文等等。<br/>
+  1、创建githbub账号；
+  2、绑定本机与github的关系，即SSH_KEY,生成好放到github存储，即双方握手；
+  3、购买域名，推荐godaddy；
+  4、去github上folk一个博客项目，然后开通github pages；
+  5、绑定github与域名的dns关系，推荐 DNSpod；
+  6、测试上线，修改个人信息、发博文等等。
   大概整体的流程就是这样，可能我的理解还是不是很到位，之后会再深入研究的。

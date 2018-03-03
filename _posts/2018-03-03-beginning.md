@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 关于这个博客的始终
-date: 208-3-03
+date: 208-03-03
 categories: blog
-tags: [标签一,标签二]
+tags: [技术]
 description: 希望自己有个好的开始。
 ---
 

@@ -19,15 +19,12 @@ description: dropzone
 <p>该组件支持传统的form表单提交和简单的div操作，下面是实例：</p>
 
 <h4>form表单的方式</h4>
-
-<pre>
 	<form action="/file-upload" class="dropzone">
 	  <div class="fallback">
 	    <input name="file" type="file" multiple />
 	  </div>
 	</form>
-</pre>
-	<p>此为官网上给出的实例，不知道为何我在此被困惑了一天左右的时间，原因是后台无法根据name获得iuput的文件流。</p>
+<p>此为官网上给出的实例，不知道为何我在此被困惑了一天左右的时间，原因是后台无法根据name获得iuput的文件流。</p>
 <p>之后百度了很多版本，发现取消fallback这个class，将input设置为hidden，那么可以正常从后台提取到文件流。</p>
 <p>看来网上的东西不能随便copy，需要自己去摸索！！！！</p>
 <p>tips:
@@ -36,12 +33,11 @@ description: dropzone
 <p>上面的属性中，action代表路由，class代表引用组件的class（严重影响美观)</p>
 
 <h4>div的方式</h4>
-<p>
-	<pre>
-	<div id="myId" class="dropzone" style="width: 800px; height: 300px;">点我上传</div>
-	</pre>
-	人没有尝试这种效果,百度了很久的ajax异步上传，没有成功
-</p>
+
+	<div id="myId" class="dropzone" style="width: 800px; height: 300px;">点我上传
+	</div>
+<p>	人没有尝试这种效果,百度了很久的ajax异步上传，没有成功</p>
+
 <p>需要注意的是此种方法需要在初始化时，指定URL属性</p>
 </blockquote>
 <h3>如何在js初始化</h3>
@@ -90,8 +86,7 @@ description: dropzone
 </blockquote>
 </p>
 <h3>为组件添加上传预览字符串</h3>
-<p>
-	<pre>
+
 		<div class="dz-preview dz-file-preview">
 		  <div class="dz-details">
 		    <div class="dz-filename"><span data-dz-name></span></div>
@@ -103,8 +98,7 @@ description: dropzone
 		  <div class="dz-error-mark"><span>✘</span></div>
 		  <div class="dz-error-message"><span data-dz-errormessage></span></div>
 		</div>
-	</pre>
-</p>
+		
 <h3>为上传文件生成缩略图</h3>
 <p>
 	在配置项的thumbnail属性，添加以下方法即可:

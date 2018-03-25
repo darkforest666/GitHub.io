@@ -20,11 +20,13 @@ description: dropzone
 <blockquote>
 <h4>form表单的方式</h4>
 <p>
+	<pre>
 	<form action="/file-upload" class="dropzone">
   <div class="fallback">
     <input name="file" type="file" multiple />
   </div>
 </form>
+</pre>
 	此为官网上给出的实例，不知道为何我在此被困惑了一天左右的时间，原因是后台无法根据name获得iuput的文件流。</p>
 <p>之后百度了很多版本，发现取消fallback这个class，将input设置为hidden，那么可以正常从后台提取到文件流。</p>
 <p>看来网上的东西不能随便copy，需要自己去摸索！！！！</p>
@@ -35,15 +37,17 @@ description: dropzone
 </blockquote>
 <h4>div的方式</h4>
 <p>
+	<pre>
 	<div id="myId" class="dropzone" style="width: 800px; height: 300px;">点我上传</div>
 	本人没有尝试这种效果,百度了很久的ajax异步上传，没有成功
-
+	</pre>
 </p>
 <p>需要注意的是此种方法需要在初始化时，指定URL属性</p>
 </blockquote>
 <h3>如何在js初始化</h3>
 <p>
 <blockquote>
+	<pre>
 	var myDropzone = new Dropzone("#dropz", {
         url: "/admin/upload",//文件提交地址
         previewTemplate：‘’，//为HTML添加一个上传预览字符串
@@ -82,6 +86,7 @@ description: dropzone
             });
         }
     });
+</pre>
 </blockquote>
 </p>
 <h3>为组件添加上传预览字符串</h3>
@@ -105,6 +110,7 @@ description: dropzone
 <p>
 	在配置项的thumbnail属性，添加以下方法即可:
 	<blockquote>
+		<pre>
 		thumbnail: function(file, dataUrl) {
 			      if (file.previewElement) {
 			        $(file.previewElement).removeClass("dz-file-preview");
@@ -116,11 +122,13 @@ description: dropzone
 			        setTimeout(function() { $(file.previewElement).addClass("dz-image-preview"); }, 1);
 			      }
 			    }
+			</pre>
 	</blockquote>
 </p>
 <h3>为上传文件过程添加进度条</h3>
 <p>
 	<blockquote>
+		<pre>
 		 var minSteps = 6,
 			      maxSteps = 60,
 			      timeBetweenSteps = 100,
@@ -151,6 +159,7 @@ description: dropzone
 			      }
 			    }
 			   }
+			  </pre>
 	</blockquote>
 	myDropzone为初始化生成的对象
 </p>

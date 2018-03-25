@@ -17,17 +17,15 @@ description: dropzone
 <p>同样也支持commonjs的require写法，大家可以去官网查看</p>
 <h3>组件的初始化</h3>
 <p>该组件支持传统的form表单提交和简单的div操作，下面是实例：</p>
-<blockquote>
+
 <h4>form表单的方式</h4>
 <p>
 	<pre>
-		<code>
 	<form action="/file-upload" class="dropzone">
 	  <div class="fallback">
 	    <input name="file" type="file" multiple />
 	  </div>
 	</form>
-	</code>
 </pre>
 	此为官网上给出的实例，不知道为何我在此被困惑了一天左右的时间，原因是后台无法根据name获得iuput的文件流。</p>
 <p>之后百度了很多版本，发现取消fallback这个class，将input设置为hidden，那么可以正常从后台提取到文件流。</p>
@@ -36,7 +34,7 @@ description: dropzone
 	form标签一定要添加这个属性：enctype="multipart/form-data"
 </p>
 <p>上面的属性中，action代表路由，class代表引用组件的class（严重影响美观)</p>
-</blockquote>
+
 <h4>div的方式</h4>
 <p>
 	<pre>

@@ -21,11 +21,13 @@ description: dropzone
 <h4>form表单的方式</h4>
 <p>
 	<pre>
+		<code>
 	<form action="/file-upload" class="dropzone">
-  <div class="fallback">
-    <input name="file" type="file" multiple />
-  </div>
-</form>
+	  <div class="fallback">
+	    <input name="file" type="file" multiple />
+	  </div>
+	</form>
+	</code>
 </pre>
 	此为官网上给出的实例，不知道为何我在此被困惑了一天左右的时间，原因是后台无法根据name获得iuput的文件流。</p>
 <p>之后百度了很多版本，发现取消fallback这个class，将input设置为hidden，那么可以正常从后台提取到文件流。</p>
@@ -38,8 +40,10 @@ description: dropzone
 <h4>div的方式</h4>
 <p>
 	<pre>
+		<code>
 	<div id="myId" class="dropzone" style="width: 800px; height: 300px;">点我上传</div>
 	本人没有尝试这种效果,百度了很久的ajax异步上传，没有成功
+		</code>
 	</pre>
 </p>
 <p>需要注意的是此种方法需要在初始化时，指定URL属性</p>
@@ -92,6 +96,8 @@ description: dropzone
 <h3>为组件添加上传预览字符串</h3>
 <p>
 	<blockquote>
+		<pre>
+			<code>
 		<div class="dz-preview dz-file-preview">
 		  <div class="dz-details">
 		    <div class="dz-filename"><span data-dz-name></span></div>
@@ -101,9 +107,10 @@ description: dropzone
 		  <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
 		  <div class="dz-success-mark"><span>✔</span></div>
 		  <div class="dz-error-mark"><span>✘</span></div>
-		  <div class="dz-error-message"><span data-dz-errormessage></span>
-	 	</div>
-</div>
+		  <div class="dz-error-message"><span data-dz-errormessage></span></div>
+		</div>
+		</code>
+	</pre>
 	</blockquote>
 </p>
 <h3>为上传文件生成缩略图</h3>
@@ -112,16 +119,16 @@ description: dropzone
 	<blockquote>
 		<pre>
 		thumbnail: function(file, dataUrl) {
-			      if (file.previewElement) {
-			        $(file.previewElement).removeClass("dz-file-preview");
-			        var images = $(file.previewElement).find("[data-dz-thumbnail]").each(function() {
-						var thumbnailElement = this;
-						thumbnailElement.alt = file.name;
-						thumbnailElement.src = dataUrl;
-					});
-			        setTimeout(function() { $(file.previewElement).addClass("dz-image-preview"); }, 1);
-			      }
-			    }
+		 	if (file.previewElement) {
+		 $(file.previewElement).removeClass("dz-file-preview");
+		var images = $(file.previewElement).find("[data-dz-thumbnail]").each(function() {
+					var thumbnailElement = this;
+					thumbnailElement.alt = file.name;
+					thumbnailElement.src = dataUrl;
+		});
+		setTimeout(function() { $(file.previewElement).addClass("dz-image-preview"); }, 1);
+		    }
+		}
 			</pre>
 	</blockquote>
 </p>

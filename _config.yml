@@ -1,13 +1,13 @@
 # Site settings
 title: 畅通的技术博客 # 你的博客名字，可以定义修订
 header-img: "img/green.jpg"
-tagline: "cn"  
+tagline: "cn"
 description: "这是我的博客"  # 一句话描述你的博客
 baseurl: ""
-url: "http://darkforest.live"  # 此处填写你的博客地址 
+url: "http://darkforest.live"  # 此处填写你的博客地址
 
 # About/contact
-owner: 
+owner:
   name: "畅通" # 填写作者信息：名字
   email: darkforest@live.cn # 填写作者信息：邮箱
   bio: "前端、技术、感悟" # 填写作者信息：博客描述
@@ -17,15 +17,15 @@ gavatar: img/favicon.png # 浏览器地址栏小图标，可自定义更改
 favicon: img/favicon.png # 浏览器地址栏小图标，可自定义更改
 
 douban_username:  # 你的豆瓣id
-twitter_username: 
+twitter_username:
 github_username: darkforesr666
-facebook_username: 
-weibo_username: 
-zhihu_username: 
+facebook_username:
+weibo_username:
+zhihu_username:
 
-# Build settings  
-# use Github Flavored Markdown !important  
-# document: http://jekyllrb.com/docs/configuration/#kramdown  
+# Build settings
+# use Github Flavored Markdown !important
+# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
@@ -38,7 +38,7 @@ timezone: Asia/Shanghai
 # Defaults for posts
 defaults:
   -
-    scope: 
+    scope:
       path: ""
       type: "posts"
     values:
@@ -46,7 +46,7 @@ defaults:
       author: "畅通" # 你的名字
       header-img: "img/green.jpg" # We don't want posts without a header image, that whould mean white on white
 
-# Comments 
+# Comments
 comments :
   provider : disqus # 使用 disqus 评论模块，读者翻墙才能看见
   duoshuo :
@@ -63,3 +63,19 @@ bing_verify:
 # Links to include in footer navigation
 
 theme: jekyll-theme-minimal
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  log: false
+  model:
+    use: ./live2d_models/live2d-widget-model-hijiki
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true

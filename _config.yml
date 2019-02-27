@@ -72,7 +72,7 @@ live2d:
   tagMode: false
   log: false
   model:
-    use: ./live2d_models/live2d-widget-model-hijiki
+    use: live2d-widget-model-hijiki
   display:
     position: right
     width: 150

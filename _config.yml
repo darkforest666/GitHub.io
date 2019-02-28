@@ -67,8 +67,8 @@ live2d:
   enable: true
   scriptFrom: local
   pluginRootPath: live2d-widget-model-hijiki/
-  pluginJsPath: /lib
-  pluginModelPath: /assets
+  pluginJsPath: lib/
+  pluginModelPath: assets/
   tagMode: false
   log: false
   model:

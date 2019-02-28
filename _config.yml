@@ -61,8 +61,6 @@ google_verify:
 bing_verify:
 
 # Links to include in footer navigation
-
-theme: jekyll-theme-minimal
 live2d:
   enable: true
   scriptFrom: jsdelivr
@@ -77,3 +75,4 @@ live2d:
   react:
     opacityDefault: 1
     opacityOnHover: 0.2
+theme: jekyll-theme-minimal

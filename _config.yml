@@ -67,8 +67,8 @@ live2d:
   enable: true
   scriptFrom: local
   pluginRootPath: live2dw/
-  pluginJsPath: lib/
-  pluginModelPath: assets/
+  pluginJsPath: .node_modules/hexo-helper-live2d/lib
+  pluginModelPath: .live2d-widget-model-hijiki/assets
   tagMode: false
   log: false
   model:
